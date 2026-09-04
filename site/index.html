@@ -655,11 +655,11 @@
                         <div class="form-group">
                             <label><i class="fas fa-bed"></i> Room Type</label>
                             <select id="roomType">
-                                <option value="standard">Standard Room</option>
-                                <option value="deluxe">Deluxe Room</option>
-                                <option value="suite">Executive Suite</option>
-                                <option value="family">Family Suite</option>
-                                <option value="presidential">Presidential Suite</option>
+                                <option value="karisimbi">Karisimbi</option>
+                                <option value="bisoke">Bisoke</option>
+                                <option value="muhabura">Muhabura</option>
+                                <option value="gahinga">Gahinga</option>
+                                <option value="sabyinyo">Sabyinyo</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -684,18 +684,6 @@
                     </div>
                     <div class="room-info">
                         <h3>Karisimbi</h3>
-                        <div class="room-meta">
-                            <span><i class="fas fa-star"></i> 4.9 (128 reviews)</span>
-                            <span><i class="fas fa-user"></i> 2 Adults</span>
-                            <span><i class="fas fa-bed"></i> King Bed</span>
-                        </div>
-                        <div class="room-amenities">
-                            <span><i class="fas fa-wifi"></i> WiFi</span>
-                            <span><i class="fas fa-tv"></i> Smart TV</span>
-                            <span><i class="fas fa-utensils"></i> Breakfast</span>
-                            <span><i class="fas fa-hot-tub"></i> Jacuzzi</span>
-                        </div>
-                        <p class="price">$120 <span>/ night</span></p>
                         <a class='btn-outline' href='rooms.html' onclick='event.preventDefault();window.location.href=\'rooms.html\';'>View Details</a>
                     </div>
                 </div>
@@ -705,18 +693,6 @@
                     </div>
                     <div class="room-info">
                         <h3>Bisoke</h3>
-                        <div class="room-meta">
-                            <span><i class="fas fa-star"></i> 4.8 (96 reviews)</span>
-                            <span><i class="fas fa-user"></i> 2 Adults</span>
-                            <span><i class="fas fa-bed"></i> Queen Bed</span>
-                        </div>
-                        <div class="room-amenities">
-                            <span><i class="fas fa-wifi"></i> WiFi</span>
-                            <span><i class="fas fa-tv"></i> Smart TV</span>
-                            <span><i class="fas fa-utensils"></i> Breakfast</span>
-                            <span><i class="fas fa-mountain"></i> Ocean View</span>
-                        </div>
-                        <p class="price">$95 <span>/ night</span></p>
                         <a class='btn-outline' href='rooms.html' onclick='event.preventDefault();window.location.href=\'rooms.html\';'>View Details</a>
                     </div>
                 </div>
@@ -726,17 +702,6 @@
                     </div>
                     <div class="room-info">
                         <h3>Muhabura</h3>
-                        <div class="room-meta">
-                            <span><i class="fas fa-star"></i> 4.5 (203 reviews)</span>
-                            <span><i class="fas fa-user"></i> 2 Adults</span>
-                            <span><i class="fas fa-bed"></i> Double Bed</span>
-                        </div>
-                        <div class="room-amenities">
-                            <span><i class="fas fa-wifi"></i> WiFi</span>
-                            <span><i class="fas fa-tv"></i> Smart TV</span>
-                            <span><i class="fas fa-utensils"></i> Breakfast</span>
-                        </div>
-                        <p class="price">$65 <span>/ night</span></p>
                         <a class='btn-outline' href='rooms.html' onclick='event.preventDefault();window.location.href=\'rooms.html\';'>View Details</a>
                     </div>
                 </div>
@@ -755,24 +720,24 @@
             <h2 class="section-title">Why <span>Choose Us</span></h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Safe & Secure</h3>
-                    <p>24/7 security with CCTV surveillance and secure keycard access</p>
+                    <i class="fas fa-bed"></i>
+                    <h3>Comfortable Rooms</h3>
+                    <p>Relax in thoughtfully prepared rooms with calm interiors and quality bedding.</p>
                 </div>
                 <div class="feature-card">
-                    <i class="fas fa-concierge-bell"></i>
-                    <h3>24/7 Concierge</h3>
-                    <p>Round-the-clock service to make your stay effortless and enjoyable</p>
+                    <i class="fas fa-home"></i>
+                    <h3>Welcoming Spaces</h3>
+                    <p>Enjoy inviting indoor and outdoor areas made for slow mornings and shared moments.</p>
                 </div>
                 <div class="feature-card">
-                    <i class="fas fa-swimming-pool"></i>
-                    <h3>Luxury Pool</h3>
-                    <p>Infinity pool with panoramic views of the city skyline</p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Kigali Location</h3>
+                    <p>Stay in Kicukiro, Kigali, close to the city while enjoying a peaceful retreat.</p>
                 </div>
                 <div class="feature-card">
-                    <i class="fas fa-dumbbell"></i>
-                    <h3>Modern Gym</h3>
-                    <p>State-of-the-art fitness center with personal trainers available</p>
+                    <i class="fas fa-heart"></i>
+                    <h3>Warm Hospitality</h3>
+                    <p>Experience a personal, home-like stay with attentive service from arrival to departure.</p>
                 </div>
             </div>
         </div>
@@ -974,13 +939,7 @@
             
             const nights = Math.ceil((checkoutDate - checkinDate) / (1000 * 60 * 60 * 24));
             const roomType = document.getElementById('roomType').value;
-            const roomNames = {
-                standard: 'Standard Room',
-                deluxe: 'Deluxe Room',
-                suite: 'Executive Suite',
-                family: 'Family Suite',
-                presidential: 'Presidential Suite'
-            };
+            const roomNames = { karisimbi: 'Karisimbi', bisoke: 'Bisoke', muhabura: 'Muhabura', gahinga: 'Gahinga', sabyinyo: 'Sabyinyo' };
             
             msg.innerHTML = `
                 ✅ <strong>Availability Confirmed!</strong><br>
