@@ -1,0 +1,9 @@
+{
+  "name": "nezahouse-static-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Neza House static site with booking email notifications",
+  "dependencies": {
+    "nodemailer": "^10.0.0"
+  }
+}

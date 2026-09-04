@@ -426,7 +426,7 @@
                 <div class="success-message" id="successMessage">
                     <i class="fas fa-check-circle"></i>
                     <h2>Booking <span style="color:var(--primary);">Confirmed!</span></h2>
-                    <p>Your reservation has been successfully submitted. A confirmation email has been sent to your inbox.</p>
+                    <p>Your booking request has been sent to Neza House. Our team will contact you to confirm the reservation.</p>
                     <div class="booking-ref" id="bookingRef">NEZA-2026-0000</div>
                     <br /><br />
                     <a class='btn-book' href='index.html' onclick='event.preventDefault();window.location.href=\'index.html\';' style='display:inline-block;width:auto;padding:14px 40px;background:var(--dark);color:var(--white);'>Return Home</a>
@@ -540,7 +540,7 @@
         setTimeout(updateSummary, 100);
 
         // ===== FORM SUBMIT =====
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+        document.getElementById('bookingForm').addEventListener('submit', async function(e) {
             e.preventDefault();
 
             const checkin = document.getElementById('checkin').value;
@@ -584,35 +584,47 @@
                 createdAt: new Date().toISOString()
             };
 
-            // Save to localStorage
-            let bookings = JSON.parse(localStorage.getItem('nezahouse_bookings') || '[]');
-            bookings.push(bookingData);
-            localStorage.setItem('nezahouse_bookings', JSON.stringify(bookings));
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending booking...';
 
-            // Show success
-            document.getElementById('bookingForm').style.display = 'none';
-            document.getElementById('bookingSummary').style.display = 'none';
-            document.getElementById('successMessage').classList.add('show');
+            try {
+                const response = await fetch('/.netlify/functions/send-booking', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        reference: ref,
+                        checkin,
+                        checkout,
+                        roomType,
+                        roomName: roomNames[roomType] || roomType,
+                        adults: document.getElementById('adults').value,
+                        children: document.getElementById('children').value,
+                        fullName,
+                        email,
+                        phone,
+                        country: document.getElementById('country').value,
+                        requests: document.getElementById('requests').value,
+                        createdAt: new Date().toISOString()
+                    })
+                });
+                const result = await response.json().catch(() => ({}));
+                if (!response.ok || !result.ok) throw new Error(result.error || 'Booking email failed');
 
-            console.log('📋 Booking Data for Third-Party Integration:');
-            console.log(JSON.stringify(bookingData, null, 2));
-
-            // ===== THIRD PARTY INTEGRATION HOOK =====
-            // Uncomment and replace with your payment partner's API endpoint
-            /*
-            fetch('https://your-payment-partner.com/api/book', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(bookingData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Payment partner response:', data);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-            */
+                // Keep a local copy for the guest's browser while the email is delivered server-side.
+                const bookings = JSON.parse(localStorage.getItem('nezahouse_bookings') || '[]');
+                bookings.push({ ...bookingData, emailedAt: new Date().toISOString() });
+                localStorage.setItem('nezahouse_bookings', JSON.stringify(bookings));
+                document.getElementById('bookingForm').style.display = 'none';
+                document.getElementById('bookingSummary').style.display = 'none';
+                document.getElementById('successMessage').classList.add('show');
+            } catch (error) {
+                console.error('Booking submission failed:', error);
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+                alert('We could not send your booking right now. Please try again or contact Neza House directly.');
+            }
         });
 
         console.log('🏨 Neza House • Booking System Ready');
