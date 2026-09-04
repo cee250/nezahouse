@@ -584,24 +584,6 @@
             section { padding: 40px 0; }
         }
     </style>
-
-        /* ===== SUPPLIED NEZAHOUSE MEDIA ===== */
-        .media-showcase { padding: 96px 0; background: var(--bg-color); }
-        .media-showcase-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: stretch; }
-        .media-feature, .media-video-card { position: relative; overflow: hidden; border-radius: 20px; min-height: 360px; background: #111; box-shadow: 0 18px 45px rgba(0,0,0,.16); }
-        .media-feature img, .media-video-card video { width: 100%; height: 100%; min-height: 360px; display: block; object-fit: cover; }
-        .media-feature .media-copy { position: absolute; left: 24px; right: 24px; bottom: 24px; z-index: 2; color: #fff; padding: 24px; border-radius: 16px; background: linear-gradient(180deg, transparent, rgba(0,0,0,.82)); }
-        .media-copy h3 { margin: 18px 0 6px; font-family: var(--font-heading); font-size: 2rem; }
-        .media-video-card { min-height: 280px; }
-        .media-video-card video { min-height: 280px; }
-        .media-video-card .video-label { position: absolute; left: 18px; bottom: 18px; color: #fff; padding: 10px 14px; border-radius: 30px; background: rgba(0,0,0,.62); font-weight: 600; }
-        .supplied-media { position: relative; }
-        .supplied-media img { transition: transform .45s ease, filter .45s ease; }
-        .supplied-media:hover img { transform: scale(1.06); filter: brightness(1.08); }
-        .gallery-item video { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .gallery-item.video-tile { cursor: default; }
-        @media (max-width: 780px) { .media-showcase-grid { grid-template-columns: 1fr; } .media-feature, .media-video-card, .media-feature img, .media-video-card video { min-height: 280px; } .media-copy h3 { font-size: 1.6rem; } }
-
     </head>
 <body>
 
@@ -647,28 +629,7 @@
             <span>Scroll</span>
             <i class="fas fa-chevron-down"></i>
         </div>
-    </section>
-
-    <!-- ===== SUPPLIED MEDIA SHOWCASE ===== -->
-    <section class="media-showcase" id="experience">
-        <div class="container">
-            <h2 class="section-title">Experience <span>Neza House</span></h2>
-            <p class="section-sub">A closer look at the spaces, details, and hospitality waiting for you in Kigali</p>
-            <div class="media-showcase-grid">
-                <article class="media-feature supplied-media">
-                    <img src="assets/nezahouse/img_5680.webp" alt="Neza House exterior" loading="lazy" />
-                    <div class="media-copy"><span class="subtitle">Your Kigali escape</span><h3>Arrive somewhere special</h3><p>Explore our welcoming grounds and thoughtfully designed spaces before you arrive.</p></div>
-                </article>
-                <article class="media-video-card">
-                    <video controls muted loop playsinline preload="metadata" poster="assets/nezahouse/whatsapp-video-2026-09-04-at-06.36.26.webp">
-                        <source src="assets/nezahouse/whatsapp-video-2026-09-04-at-06.36.26.mp4" type="video/mp4" />
-                    </video>
-                    <span class="video-label"><i class="fas fa-play-circle"></i> See Neza House in motion</span>
-                </article>
-            </div>
-        </div>
-    </section>
-    <!-- ===== BOOKING SECTION ===== -->
+    </section><!-- ===== BOOKING SECTION ===== -->
     <section class="booking-section" id="booking">
         <div class="container">
             <div class="booking-card">
@@ -718,11 +679,11 @@
             <p class="section-sub">Luxury redefined, every stay</p>
             <div class="room-grid">
                 <div class="room-card">
-                    <div class="room-img" style="background-image: url('assets/nezahouse/img_5676.webp');">
+                    <div class="room-img" style="background-image: url('assets/nezahouse/img_8194.webp');">
                         <div class="room-badge">Popular</div>
                     </div>
                     <div class="room-info">
-                        <h3>Executive Suite</h3>
+                        <h3>Karisimbi</h3>
                         <div class="room-meta">
                             <span><i class="fas fa-star"></i> 4.9 (128 reviews)</span>
                             <span><i class="fas fa-user"></i> 2 Adults</span>
@@ -739,11 +700,11 @@
                     </div>
                 </div>
                 <div class="room-card">
-                    <div class="room-img" style="background-image: url('assets/nezahouse/img_5688.webp');">
+                    <div class="room-img" style="background-image: url('assets/nezahouse/img_8196.webp');">
                         <div class="room-badge">Best View</div>
                     </div>
                     <div class="room-info">
-                        <h3>Deluxe Ocean View</h3>
+                        <h3>Bisoke</h3>
                         <div class="room-meta">
                             <span><i class="fas fa-star"></i> 4.8 (96 reviews)</span>
                             <span><i class="fas fa-user"></i> 2 Adults</span>
@@ -760,11 +721,11 @@
                     </div>
                 </div>
                 <div class="room-card">
-                    <div class="room-img" style="background-image: url('assets/nezahouse/img_5677.webp');">
+                    <div class="room-img" style="background-image: url('assets/nezahouse/whatsapp-image-2026-09-04-at-06.36.27.webp');">
                         <div class="room-badge">Budget</div>
                     </div>
                     <div class="room-info">
-                        <h3>Standard Double</h3>
+                        <h3>Muhabura</h3>
                         <div class="room-meta">
                             <span><i class="fas fa-star"></i> 4.5 (203 reviews)</span>
                             <span><i class="fas fa-user"></i> 2 Adults</span>
@@ -823,16 +784,16 @@
             <h2 class="section-title">Photo <span>Gallery</span></h2>
             <p class="section-sub">Explore the beauty of Neza House through our curated collection</p>
             <div class="gallery-grid">
-                <div class="gallery-item" style="background-image: url('assets/unsplash-16.jpg');">
+                <div class="gallery-item" style="background-image: url('assets/nezahouse/img_5676.webp');">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                 </div>
-                <div class="gallery-item" style="background-image: url('assets/unsplash-17.jpg');">
+                <div class="gallery-item" style="background-image: url('assets/nezahouse/img_5680.webp');">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                 </div>
-                <div class="gallery-item" style="background-image: url('assets/unsplash-18.jpg');">
+                <div class="gallery-item" style="background-image: url('assets/nezahouse/img_5688.webp');">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                 </div>
-                <div class="gallery-item" style="background-image: url('assets/unsplash-19.jpg');">
+                <div class="gallery-item" style="background-image: url('assets/nezahouse/img_5691.webp');">
                     <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                 </div>
             </div>
