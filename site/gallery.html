@@ -252,7 +252,25 @@
             .footer-grid { grid-template-columns: 1fr; gap: 24px; }
         }
     </style>
-</head>
+
+        /* ===== SUPPLIED NEZAHOUSE MEDIA ===== */
+        .media-showcase { padding: 96px 0; background: var(--bg-color); }
+        .media-showcase-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: stretch; }
+        .media-feature, .media-video-card { position: relative; overflow: hidden; border-radius: 20px; min-height: 360px; background: #111; box-shadow: 0 18px 45px rgba(0,0,0,.16); }
+        .media-feature img, .media-video-card video { width: 100%; height: 100%; min-height: 360px; display: block; object-fit: cover; }
+        .media-feature .media-copy { position: absolute; left: 24px; right: 24px; bottom: 24px; z-index: 2; color: #fff; padding: 24px; border-radius: 16px; background: linear-gradient(180deg, transparent, rgba(0,0,0,.82)); }
+        .media-copy h3 { margin: 18px 0 6px; font-family: var(--font-heading); font-size: 2rem; }
+        .media-video-card { min-height: 280px; }
+        .media-video-card video { min-height: 280px; }
+        .media-video-card .video-label { position: absolute; left: 18px; bottom: 18px; color: #fff; padding: 10px 14px; border-radius: 30px; background: rgba(0,0,0,.62); font-weight: 600; }
+        .supplied-media { position: relative; }
+        .supplied-media img { transition: transform .45s ease, filter .45s ease; }
+        .supplied-media:hover img { transform: scale(1.06); filter: brightness(1.08); }
+        .gallery-item video { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .gallery-item.video-tile { cursor: default; }
+        @media (max-width: 780px) { .media-showcase-grid { grid-template-columns: 1fr; } .media-feature, .media-video-card, .media-feature img, .media-video-card video { min-height: 280px; } .media-copy h3 { font-size: 1.6rem; } }
+
+    </head>
 <body>
 
     <!-- ===== NAVIGATION ===== -->
@@ -303,52 +321,64 @@
         <div class="container">
             <div class="gallery-grid" id="galleryGrid">
                 <div class="gallery-item" data-category="rooms">
-                    <img src="assets/unsplash-02.jpg" alt="Executive Suite" />
+                    <img src="assets/nezahouse/img_8194.webp" alt="Executive Suite" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Executive Suite</h3><p>Luxury accommodation</p></div>
                 </div>
                 <div class="gallery-item" data-category="restaurant">
-                    <img src="assets/unsplash-03.jpg" alt="Restaurant" />
+                    <img src="assets/nezahouse/img_8196.webp" alt="Restaurant" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Luxe Dining</h3><p>Fine dining experience</p></div>
                 </div>
                 <div class="gallery-item" data-category="pool">
-                    <img src="assets/unsplash-04.jpg" alt="Pool" />
+                    <img src="assets/nezahouse/img_5676.webp" alt="Pool" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Infinity Pool</h3><p>Panoramic views</p></div>
                 </div>
                 <div class="gallery-item" data-category="rooms">
-                    <img src="assets/unsplash-05.jpg" alt="Deluxe Room" />
+                    <img src="assets/nezahouse/img_5677.webp" alt="Deluxe Room" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Deluxe Room</h3><p>Ocean view</p></div>
                 </div>
                 <div class="gallery-item" data-category="spa">
-                    <img src="assets/unsplash-06.jpg" alt="Spa" />
+                    <img src="assets/nezahouse/img_5680.webp" alt="Spa" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Luxe Spa</h3><p>Relaxation therapy</p></div>
                 </div>
                 <div class="gallery-item" data-category="events">
-                    <img src="assets/unsplash-07.jpg" alt="Event" />
+                    <img src="assets/nezahouse/img_5682.webp" alt="Event" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Events Hall</h3><p>Weddings & conferences</p></div>
                 </div>
                 <div class="gallery-item" data-category="restaurant">
-                    <img src="assets/unsplash-08.jpg" alt="Food" />
+                    <img src="assets/nezahouse/img_5688.webp" alt="Food" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Gourmet Cuisine</h3><p>Signature dishes</p></div>
                 </div>
                 <div class="gallery-item" data-category="pool">
-                    <img src="assets/unsplash-09.jpg" alt="Hotel Exterior" />
+                    <img src="assets/nezahouse/img_5691.webp" alt="Hotel Exterior" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Hotel Exterior</h3><p>Luxury facade</p></div>
                 </div>
                 <div class="gallery-item" data-category="rooms">
-                    <img src="assets/unsplash-10.jpg" alt="Standard Room" />
+                    <img src="assets/nezahouse/whatsapp-image-2026-09-04-at-06.36.27.webp" alt="Standard Room" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Standard Room</h3><p>Comfortable stay</p></div>
                 </div>
                 <div class="gallery-item" data-category="spa">
-                    <img src="assets/unsplash-11.jpg" alt="Massage" />
+                    <img src="assets/nezahouse/whatsapp-image-2026-09-04-at-06.41.53.webp" alt="Massage" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Massage Therapy</h3><p>Wellness experience</p></div>
                 </div>
                 <div class="gallery-item" data-category="events">
-                    <img src="assets/unsplash-12.jpg" alt="Wedding" />
+                    <img src="assets/nezahouse/whatsapp-image-2026-09-04-at-06.41.54.webp" alt="Wedding" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Weddings</h3><p>Dream ceremonies</p></div>
                 </div>
                 <div class="gallery-item" data-category="restaurant">
-                    <img src="assets/unsplash-13.jpg" alt="Steak" />
+                    <img src="assets/nezahouse/img_5678.webp" alt="Steak" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Grilled Specials</h3><p>Chef's selection</p></div>
+                </div>
+                <div class="gallery-item video-tile" data-category="restaurant">
+                    <video controls muted loop playsinline preload="metadata" poster="assets/nezahouse/whatsapp-video-2026-09-04-at-06.36.26.webp"><source src="assets/nezahouse/whatsapp-video-2026-09-04-at-06.36.26.mp4" type="video/mp4" /></video>
+                    <div class="overlay"><i class="fas fa-play"></i><h3>Welcome Inside</h3><p>Watch the Neza House experience</p></div>
+                </div>
+                <div class="gallery-item video-tile" data-category="rooms">
+                    <video controls muted loop playsinline preload="metadata" poster="assets/nezahouse/whatsapp-video-2026-09-04-at-06.41.55.webp"><source src="assets/nezahouse/whatsapp-video-2026-09-04-at-06.41.55.mp4" type="video/mp4" /></video>
+                    <div class="overlay"><i class="fas fa-play"></i><h3>Room Walkthrough</h3><p>See the details up close</p></div>
+                </div>
+                <div class="gallery-item video-tile" data-category="pool">
+                    <video controls muted loop playsinline preload="metadata" poster="assets/nezahouse/whatsapp-video-2026-09-04-at-06.41.551.webp"><source src="assets/nezahouse/whatsapp-video-2026-09-04-at-06.41.551.mp4" type="video/mp4" /></video>
+                    <div class="overlay"><i class="fas fa-play"></i><h3>Relax and Unwind</h3><p>Discover the atmosphere</p></div>
                 </div>
             </div>
         </div>

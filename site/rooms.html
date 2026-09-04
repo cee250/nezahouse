@@ -299,7 +299,25 @@
             .footer-grid { grid-template-columns: 1fr; gap: 24px; }
         }
     </style>
-</head>
+
+        /* ===== SUPPLIED NEZAHOUSE MEDIA ===== */
+        .media-showcase { padding: 96px 0; background: var(--bg-color); }
+        .media-showcase-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: stretch; }
+        .media-feature, .media-video-card { position: relative; overflow: hidden; border-radius: 20px; min-height: 360px; background: #111; box-shadow: 0 18px 45px rgba(0,0,0,.16); }
+        .media-feature img, .media-video-card video { width: 100%; height: 100%; min-height: 360px; display: block; object-fit: cover; }
+        .media-feature .media-copy { position: absolute; left: 24px; right: 24px; bottom: 24px; z-index: 2; color: #fff; padding: 24px; border-radius: 16px; background: linear-gradient(180deg, transparent, rgba(0,0,0,.82)); }
+        .media-copy h3 { margin: 18px 0 6px; font-family: var(--font-heading); font-size: 2rem; }
+        .media-video-card { min-height: 280px; }
+        .media-video-card video { min-height: 280px; }
+        .media-video-card .video-label { position: absolute; left: 18px; bottom: 18px; color: #fff; padding: 10px 14px; border-radius: 30px; background: rgba(0,0,0,.62); font-weight: 600; }
+        .supplied-media { position: relative; }
+        .supplied-media img { transition: transform .45s ease, filter .45s ease; }
+        .supplied-media:hover img { transform: scale(1.06); filter: brightness(1.08); }
+        .gallery-item video { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .gallery-item.video-tile { cursor: default; }
+        @media (max-width: 780px) { .media-showcase-grid { grid-template-columns: 1fr; } .media-feature, .media-video-card, .media-feature img, .media-video-card video { min-height: 280px; } .media-copy h3 { font-size: 1.6rem; } }
+
+    </head>
 <body>
 
     <!-- ===== NAVIGATION ===== -->
@@ -336,7 +354,7 @@
         <div class="container">
             <div class="room-grid">
                 <div class="room-card">
-                    <div class="room-img" style="background-image: url('assets/unsplash-02.jpg');">
+                    <div class="room-img" style="background-image: url('assets/nezahouse/img_5676.webp');">
                         <div class="room-badge">Popular</div>
                     </div>
                     <div class="room-info">
@@ -358,7 +376,7 @@
                     </div>
                 </div>
                 <div class="room-card">
-                    <div class="room-img" style="background-image: url('assets/unsplash-05.jpg');">
+                    <div class="room-img" style="background-image: url('assets/nezahouse/img_5688.webp');">
                         <div class="room-badge">Best View</div>
                     </div>
                     <div class="room-info">
@@ -380,7 +398,7 @@
                     </div>
                 </div>
                 <div class="room-card">
-                    <div class="room-img" style="background-image: url('assets/unsplash-15.jpg');">
+                    <div class="room-img" style="background-image: url('assets/nezahouse/img_8194.webp');">
                         <div class="room-badge">Budget</div>
                     </div>
                     <div class="room-info">
@@ -401,7 +419,7 @@
                     </div>
                 </div>
                 <div class="room-card">
-                    <div class="room-img" style="background-image: url('assets/unsplash-20.jpg');">
+                    <div class="room-img" style="background-image: url('assets/nezahouse/img_8196.webp');">
                         <div class="room-badge">Family</div>
                     </div>
                     <div class="room-info">
@@ -423,7 +441,7 @@
                     </div>
                 </div>
                 <div class="room-card">
-                    <div class="room-img" style="background-image: url('assets/unsplash-05.jpg');">
+                    <div class="room-img" style="background-image: url('assets/nezahouse/whatsapp-image-2026-09-04-at-06.36.27.webp');">
                         <div class="room-badge">Exclusive</div>
                     </div>
                     <div class="room-info">
@@ -446,7 +464,7 @@
                     </div>
                 </div>
                 <div class="room-card">
-                    <div class="room-img" style="background-image: url('assets/unsplash-15.jpg');">
+                    <div class="room-img" style="background-image: url('assets/nezahouse/whatsapp-image-2026-09-04-at-06.41.53.webp');">
                         <div class="room-badge">Best Value</div>
                     </div>
                     <div class="room-info">
@@ -471,6 +489,19 @@
         </div>
     </section>
 
+    <!-- ===== SUPPLIED ROOM WALKTHROUGH ===== -->
+    <section class="media-showcase" aria-label="Room walkthrough">
+        <div class="container">
+            <h2 class="section-title">See the <span>Details</span></h2>
+            <p class="section-sub">Take a closer look at the rooms and shared spaces.</p>
+            <div class="media-video-card" style="min-height:360px;">
+                <video controls muted loop playsinline preload="metadata" poster="assets/nezahouse/whatsapp-video-2026-09-04-at-06.41.55.webp">
+                    <source src="assets/nezahouse/whatsapp-video-2026-09-04-at-06.41.55.mp4" type="video/mp4" />
+                </video>
+                <span class="video-label"><i class="fas fa-door-open"></i> Take a room and lounge tour</span>
+            </div>
+        </div>
+    </section>
     <!-- ===== CTA ===== -->
     <section class="cta-section">
         <div class="container">
