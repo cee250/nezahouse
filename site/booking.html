@@ -239,6 +239,69 @@
             .booking-box .header h1 { font-size: 1.5rem; }
             .btn-book { font-size: 1rem; padding: 14px; }
         }
+    
+        /* ===== MOBILE POLISH ===== */
+        @media (max-width: 768px) {
+            html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+            body { -webkit-text-size-adjust: 100%; }
+            .container { width: 100%; max-width: 100%; padding-left: 18px; padding-right: 18px; }
+            .navbar { padding: 12px 0; }
+            .nav-container { min-height: 48px; }
+            .logo { font-size: 1.45rem; letter-spacing: .2px; white-space: nowrap; }
+            .logo i { font-size: 1.05rem; margin-right: 5px; }
+            .nav-actions { gap: 8px; }
+            .theme-toggle { width: 38px; height: 38px; font-size: 1.1rem; }
+            .hamburger { display: block; font-size: 1.65rem; line-height: 1; }
+            .btn-nav { display: none; }
+            .nav-links { z-index: 1001; top: 64px; border-radius: 0 0 16px 16px; max-height: calc(100svh - 80px); overflow-y: auto; }
+            .hero { min-height: 100svh; height: auto; padding: 104px 0 78px; background-attachment: scroll; background-position: center center; }
+            .hero-content { width: 100%; max-width: 100%; padding: 18px; }
+            .hero-content .subtitle { font-size: .84rem; letter-spacing: 3px; }
+            .hero-content h1 { font-size: clamp(2.35rem, 11vw, 3.5rem); line-height: 1.08; }
+            .hero-content p { font-size: 1rem; line-height: 1.5; }
+            .hero-buttons { width: 100%; gap: 12px; }
+            .btn-hero { width: min(100%, 280px); justify-content: center; padding: 13px 22px; }
+            .scroll-indicator { display: none; }
+            .booking-card { padding: 22px 16px; border-radius: 18px; }
+            .booking-card h2 { font-size: 1.35rem; }
+            .form-grid, .contact-grid, .booking-grid { grid-template-columns: 1fr !important; gap: 14px; }
+            .form-group, .form-group input, .form-group select, .form-group button { min-width: 0; width: 100%; }
+            .room-grid { grid-template-columns: 1fr !important; gap: 18px; }
+            .room-card { min-width: 0; }
+            .room-img { height: 220px; }
+            .room-info { padding: 18px; }
+            .features-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .feature-card { padding: 18px 12px; }
+            .feature-card h3 { font-size: 1rem; }
+            .feature-card p { font-size: .82rem; line-height: 1.5; }
+            .gallery-grid { grid-template-columns: 1fr 1fr !important; gap: 10px; }
+            .gallery-item { width: 100%; aspect-ratio: 1 / 1; height: auto !important; }
+            .gallery-item .overlay { padding: 8px; }
+            .overlay i { font-size: 1.5rem; margin-bottom: 4px; }
+            .overlay h3 { font-size: .85rem; }
+            .overlay p { display: none; }
+            .page-header { padding: 112px 0 46px; background-attachment: scroll; }
+            .page-header h1 { font-size: clamp(2rem, 10vw, 2.7rem); }
+            .page-header p { font-size: .98rem; }
+            .gallery-section { padding-top: 38px; }
+            .gallery-item.video-tile video { min-height: 0; }
+            .lightbox { padding: 16px; }
+            .lightbox-content { max-width: 100%; max-height: 85svh; }
+            .lightbox-content img { max-height: 70svh; }
+            footer { padding-top: 44px; }
+            .footer-grid { grid-template-columns: 1fr !important; gap: 24px; }
+            .footer-col form { max-width: 100%; }
+            .floating-booking { right: max(16px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); }
+            .whatsapp-float { right: max(16px, env(safe-area-inset-right)); bottom: max(84px, calc(env(safe-area-inset-bottom) + 66px)); }
+        }
+        @media (max-width: 390px) {
+            .container { padding-left: 14px; padding-right: 14px; }
+            .logo { font-size: 1.28rem; }
+            .hero { padding-top: 96px; }
+            .hero-content h1 { font-size: 2.25rem; }
+            .features-grid { grid-template-columns: 1fr; }
+            .gallery-grid { gap: 8px; }
+        }
     </style>
 </head>
 <body>
