@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "buildCommand": "python3 scripts/prepare_assets.py",
+  "outputDirectory": "site",
+  "rewrites": [
+    {
+      "source": "/.netlify/functions/send-booking",
+      "destination": "/api/send-booking"
+    }
+  ]
+}
