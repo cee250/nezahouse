@@ -30,9 +30,9 @@ exports.handler = async (event) => {
       auth: { user, pass: appPassword },
     });
 
-    const subject = `New Neza House booking — ${booking.reference} — ${booking.roomName}`;
+    const subject = `New Grand Chalet Inn booking — ${booking.reference} — ${booking.roomName}`;
     const text = [
-      'A new booking request was submitted on the Neza House website.',
+      'A new booking request was submitted on the Grand Chalet Inn website.',
       '',
       `Reference: ${booking.reference}`,
       `Room: ${booking.roomName}`,
@@ -52,7 +52,7 @@ exports.handler = async (event) => {
     ].join('\n');
 
     await transporter.sendMail({
-      from: `Neza House bookings <${user}>`,
+      from: `Grand Chalet Inn bookings <${user}>`,
       to,
       replyTo: booking.email,
       subject,

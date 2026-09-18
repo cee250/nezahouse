@@ -1,6 +1,6 @@
-# Neza House
+# Grand Chalet Inn
 
-Static snapshot of the public Neza House website deployed at `https://nezahouse.netlify.app/`.
+Static snapshot of the public Grand Chalet Inn website deployed at `https://grandchaletinn.netlify.app/`.
 
 ## Contents
 

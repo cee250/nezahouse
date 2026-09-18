@@ -8,7 +8,9 @@
 <meta name="hosting-provider" content="Netlify">
 <meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=d61fd223-dec5-4590-8771-46922c1a84a2">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Neza House • Gallery</title>
+    <link rel="icon" type="image/png" href="assets/grand-chalet-inn/logo.png" />
+    <link rel="icon" type="image/png" href="assets/grand-chalet-inn/logo.png" />
+    <title>Grand Chalet Inn • Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -95,7 +97,7 @@
         .page-header {
             padding: 140px 0 60px;
             background: linear-gradient(rgba(26,26,46,0.7), rgba(26,26,46,0.8)),
-                        url('assets/nezahouse/img_5680.webp');
+                        url('assets/grand-chalet-inn/img_5680.webp');
             background-size: cover; background-position: center;
             text-align: center; color: #fff;
         }
@@ -314,6 +316,16 @@
             .features-grid { grid-template-columns: 1fr; }
             .gallery-grid { gap: 8px; }
         }
+
+        /* Grand Chalet Inn brand system */
+        .brand-logo { display: inline-flex; align-items: center; line-height: 0; }
+        .brand-logo img { display: block; width: 132px; height: 52px; object-fit: contain; object-position: center; }
+        .footer-brand-logo img { width: 168px; height: 82px; }
+        .site-loader { position: fixed; inset: 0; z-index: 9999; display: grid; place-items: center; background: #fff; opacity: 1; visibility: visible; transition: opacity .35s ease, visibility .35s ease; }
+        .site-loader.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+        .site-loader img { width: min(230px, 52vw); height: auto; animation: loader-pulse 1.35s ease-in-out infinite; }
+        @keyframes loader-pulse { 0%, 100% { transform: scale(.96); opacity: .82; } 50% { transform: scale(1); opacity: 1; } }
+        @media (max-width: 600px) { .brand-logo img { width: 112px; height: 46px; } .footer-brand-logo img { width: 150px; height: 72px; } }
     </style>
     
     <style id="gallery-media-style">
@@ -324,11 +336,16 @@
     </head>
 <body>
 
+    <div class="site-loader" id="siteLoader" role="status" aria-label="Loading Grand Chalet Inn">
+        <img src="assets/grand-chalet-inn/logo.png" alt="Grand Chalet Inn" />
+    </div>
+
+
     <!-- ===== NAVIGATION ===== -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
-            <div class="logo" onclick="window.location.href='index.html'">
-                <i class="fas fa-crown"></i>Neza<span>House</span>
+            <div class="logo brand-logo" onclick="window.location.href='index.html'">
+                <img src="assets/grand-chalet-inn/logo.png" alt="Grand Chalet Inn" />
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href='index.html' onclick='event.preventDefault();window.location.href=\'index.html\';'>Home</a></li>
@@ -336,7 +353,7 @@
                 <li><a class='active' href='gallery.html' onclick='event.preventDefault();window.location.href=\'gallery.html\';'>Gallery</a></li>
                 <li><a href='contact.html' onclick='event.preventDefault();window.location.href=\'contact.html\';'>Contact</a></li>
             </ul>
-            <a class='btn-nav' href='https://nezahouse.netlify.app/booking' onclick='event.preventDefault();window.location.href=\'booking.html\';'>
+            <a class='btn-nav' href='https://grandchaletinn.netlify.app/booking' onclick='event.preventDefault();window.location.href=\'booking.html\';'>
                 <i class="fas fa-calendar-check"></i> Book Now
             </a>
             <div class="hamburger" id="hamburger">
@@ -349,7 +366,7 @@
     <section class="page-header">
         <div class="container">
             <h1>Our <span>Gallery</span></h1>
-            <p>Explore the beauty of Neza House</p>
+            <p>Explore the beauty of Grand Chalet Inn</p>
         </div>
     </section>
     <!-- ===== GALLERY GRID ===== -->
@@ -357,63 +374,63 @@
         <div class="container">
             <div class="gallery-grid" id="galleryGrid">
                 <div class="gallery-item" data-category="rooms">
-                    <img src="assets/nezahouse/img_8194.webp" alt="Executive Suite" />
+                    <img src="assets/grand-chalet-inn/img_8194.webp" alt="Executive Suite" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Executive Suite</h3><p>Luxury accommodation</p></div>
                 </div>
                 <div class="gallery-item" data-category="restaurant">
-                    <img src="assets/nezahouse/img_8196.webp" alt="Restaurant" />
+                    <img src="assets/grand-chalet-inn/img_8196.webp" alt="Restaurant" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Luxe Dining</h3><p>Fine dining experience</p></div>
                 </div>
                 <div class="gallery-item" data-category="pool">
-                    <img src="assets/nezahouse/img_5676.webp" alt="Pool" />
+                    <img src="assets/grand-chalet-inn/img_5676.webp" alt="Pool" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Infinity Pool</h3><p>Panoramic views</p></div>
                 </div>
                 <div class="gallery-item" data-category="rooms">
-                    <img src="assets/nezahouse/img_5677.webp" alt="Deluxe Room" />
+                    <img src="assets/grand-chalet-inn/img_5677.webp" alt="Deluxe Room" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Deluxe Room</h3><p>Ocean view</p></div>
                 </div>
                 <div class="gallery-item" data-category="spa">
-                    <img src="assets/nezahouse/img_5680.webp" alt="Spa" />
+                    <img src="assets/grand-chalet-inn/img_5680.webp" alt="Spa" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Luxe Spa</h3><p>Relaxation therapy</p></div>
                 </div>
                 <div class="gallery-item" data-category="events">
-                    <img src="assets/nezahouse/img_5682.webp" alt="Event" />
+                    <img src="assets/grand-chalet-inn/img_5682.webp" alt="Event" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Events Hall</h3><p>Weddings & conferences</p></div>
                 </div>
                 <div class="gallery-item" data-category="restaurant">
-                    <img src="assets/nezahouse/img_5688.webp" alt="Food" />
+                    <img src="assets/grand-chalet-inn/img_5688.webp" alt="Food" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Gourmet Cuisine</h3><p>Signature dishes</p></div>
                 </div>
                 <div class="gallery-item" data-category="pool">
-                    <img src="assets/nezahouse/img_5691.webp" alt="Hotel Exterior" />
+                    <img src="assets/grand-chalet-inn/img_5691.webp" alt="Hotel Exterior" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Hotel Exterior</h3><p>Luxury facade</p></div>
                 </div>
                 <div class="gallery-item" data-category="rooms">
-                    <img src="assets/nezahouse/whatsapp-image-2026-09-04-at-06.36.27.webp" alt="Standard Room" />
+                    <img src="assets/grand-chalet-inn/whatsapp-image-2026-09-04-at-06.36.27.webp" alt="Standard Room" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Standard Room</h3><p>Comfortable stay</p></div>
                 </div>
                 <div class="gallery-item" data-category="spa">
-                    <img src="assets/nezahouse/whatsapp-image-2026-09-04-at-06.41.53.webp" alt="Massage" />
+                    <img src="assets/grand-chalet-inn/whatsapp-image-2026-09-04-at-06.41.53.webp" alt="Massage" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Massage Therapy</h3><p>Wellness experience</p></div>
                 </div>
                 <div class="gallery-item" data-category="events">
-                    <img src="assets/nezahouse/whatsapp-image-2026-09-04-at-06.41.54.webp" alt="Wedding" />
+                    <img src="assets/grand-chalet-inn/whatsapp-image-2026-09-04-at-06.41.54.webp" alt="Wedding" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Weddings</h3><p>Dream ceremonies</p></div>
                 </div>
                 <div class="gallery-item" data-category="restaurant">
-                    <img src="assets/nezahouse/img_5678.webp" alt="Steak" />
+                    <img src="assets/grand-chalet-inn/img_5678.webp" alt="Steak" />
                     <div class="overlay"><i class="fas fa-search-plus"></i><h3>Grilled Specials</h3><p>Chef's selection</p></div>
                 </div>
                 <div class="gallery-item video-tile" data-category="restaurant">
-                    <video controls muted loop playsinline preload="metadata" poster="assets/nezahouse/whatsapp-video-2026-09-04-at-06.36.26.webp"><source src="assets/nezahouse/whatsapp-video-2026-09-04-at-06.36.26.mp4" type="video/mp4" /></video>
-                    <div class="overlay"><i class="fas fa-play"></i><h3>Welcome Inside</h3><p>Watch the Neza House experience</p></div>
+                    <video controls muted loop playsinline preload="metadata" poster="assets/grand-chalet-inn/whatsapp-video-2026-09-04-at-06.36.26.webp"><source src="assets/grand-chalet-inn/whatsapp-video-2026-09-04-at-06.36.26.mp4" type="video/mp4" /></video>
+                    <div class="overlay"><i class="fas fa-play"></i><h3>Welcome Inside</h3><p>Watch the Grand Chalet Inn experience</p></div>
                 </div>
                 <div class="gallery-item video-tile" data-category="rooms">
-                    <video controls muted loop playsinline preload="metadata" poster="assets/nezahouse/whatsapp-video-2026-09-04-at-06.41.55.webp"><source src="assets/nezahouse/whatsapp-video-2026-09-04-at-06.41.55.mp4" type="video/mp4" /></video>
+                    <video controls muted loop playsinline preload="metadata" poster="assets/grand-chalet-inn/whatsapp-video-2026-09-04-at-06.41.55.webp"><source src="assets/grand-chalet-inn/whatsapp-video-2026-09-04-at-06.41.55.mp4" type="video/mp4" /></video>
                     <div class="overlay"><i class="fas fa-play"></i><h3>Room Walkthrough</h3><p>See the details up close</p></div>
                 </div>
                 <div class="gallery-item video-tile" data-category="pool">
-                    <video controls muted loop playsinline preload="metadata" poster="assets/nezahouse/whatsapp-video-2026-09-04-at-06.41.551.webp"><source src="assets/nezahouse/whatsapp-video-2026-09-04-at-06.41.551.mp4" type="video/mp4" /></video>
+                    <video controls muted loop playsinline preload="metadata" poster="assets/grand-chalet-inn/whatsapp-video-2026-09-04-at-06.41.551.webp"><source src="assets/grand-chalet-inn/whatsapp-video-2026-09-04-at-06.41.551.mp4" type="video/mp4" /></video>
                     <div class="overlay"><i class="fas fa-play"></i><h3>Relax and Unwind</h3><p>Discover the atmosphere</p></div>
                 </div>
             </div>
@@ -437,7 +454,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3><i class="fas fa-crown"></i>Neza<span>House</span></h3>
+                    <h3 class="footer-brand-logo"><img src="assets/grand-chalet-inn/logo.png" alt="Grand Chalet Inn" /></h3>
                     <p>Luxury redefined in the heart of Kigali.</p>
                     <div class="socials">
                         <a href="gallery.html#"><i class="fab fa-facebook-f"></i></a>
@@ -460,7 +477,7 @@
                     <ul class="contact-info">
                         <li><i class="fas fa-map-marker-alt"></i> Kicukiro, Kigali</li>
                         <li><i class="fas fa-phone"></i> +250 783 500 003</li>
-                        <li><i class="fas fa-envelope"></i> info@nezahouse.com</li>
+                        <li><i class="fas fa-envelope"></i> info@grandchaletinn.com</li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -475,7 +492,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Neza House. All rights reserved. | Designed with <i class="fas fa-heart"></i></p>
+                <p>&copy; 2026 Grand Chalet Inn. All rights reserved. | Designed with <i class="fas fa-heart"></i></p>
             </div>
         </div>
     </footer>
@@ -576,5 +593,13 @@
             if (e.key === 'Escape') closeLightbox();
         });
     </script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('siteLoader');
+            if (loader) { loader.classList.add('is-hidden'); setTimeout(function () { loader.remove(); }, 500); }
+        });
+    </script>
+
 </body>
 </html>
