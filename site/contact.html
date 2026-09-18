@@ -8,7 +8,9 @@
 <meta name="hosting-provider" content="Netlify">
 <meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=d61fd223-dec5-4590-8771-46922c1a84a2">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Neza House • Contact</title>
+    <link rel="icon" type="image/png" href="assets/grand-chalet-inn/logo.png" />
+    <link rel="icon" type="image/png" href="assets/grand-chalet-inn/logo.png" />
+    <title>Grand Chalet Inn • Contact</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -139,7 +141,7 @@
         .page-header {
             padding: 140px 0 60px;
             background: linear-gradient(rgba(26,26,46,0.7), rgba(26,26,46,0.8)),
-                        url('assets/nezahouse/img_5680.webp');
+                        url('assets/grand-chalet-inn/img_5680.webp');
             background-size: cover; background-position: center;
             text-align: center; color: #fff;
         }
@@ -470,15 +472,30 @@
             .features-grid { grid-template-columns: 1fr; }
             .gallery-grid { gap: 8px; }
         }
+
+        /* Grand Chalet Inn brand system */
+        .brand-logo { display: inline-flex; align-items: center; line-height: 0; }
+        .brand-logo img { display: block; width: 132px; height: 52px; object-fit: contain; object-position: center; }
+        .footer-brand-logo img { width: 168px; height: 82px; }
+        .site-loader { position: fixed; inset: 0; z-index: 9999; display: grid; place-items: center; background: #fff; opacity: 1; visibility: visible; transition: opacity .35s ease, visibility .35s ease; }
+        .site-loader.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+        .site-loader img { width: min(230px, 52vw); height: auto; animation: loader-pulse 1.35s ease-in-out infinite; }
+        @keyframes loader-pulse { 0%, 100% { transform: scale(.96); opacity: .82; } 50% { transform: scale(1); opacity: 1; } }
+        @media (max-width: 600px) { .brand-logo img { width: 112px; height: 46px; } .footer-brand-logo img { width: 150px; height: 72px; } }
     </style>
 </head>
 <body>
 
+    <div class="site-loader" id="siteLoader" role="status" aria-label="Loading Grand Chalet Inn">
+        <img src="assets/grand-chalet-inn/logo.png" alt="Grand Chalet Inn" />
+    </div>
+
+
     <!-- ===== NAVIGATION ===== -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
-            <div class="logo" onclick="window.location.href='index.html'">
-                <i class="fas fa-crown"></i>Neza<span>House</span>
+            <div class="logo brand-logo" onclick="window.location.href='index.html'">
+                <img src="assets/grand-chalet-inn/logo.png" alt="Grand Chalet Inn" />
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href='index.html' onclick='event.preventDefault();window.location.href=\'index.html\';'>Home</a></li>
@@ -490,7 +507,7 @@
                 <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle" title="Toggle Theme">
                     <i class="fas fa-moon" id="themeIcon"></i>
                 </button>
-                <a class='btn-nav' href='https://nezahouse.netlify.app/booking' onclick='event.preventDefault();window.location.href=\'booking.html\';'>
+                <a class='btn-nav' href='https://grandchaletinn.netlify.app/booking' onclick='event.preventDefault();window.location.href=\'booking.html\';'>
                     <i class="fas fa-calendar-check"></i> Book Now
                 </a>
                 <div class="hamburger" id="hamburger">
@@ -521,8 +538,8 @@
                 <div class="contact-card">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
-                    <p><a href="mailto:info@nezahouse.com">info@nezahouse.com</a></p>
-                    <p><a href="mailto:reservations@nezahouse.com">reservations@nezahouse.com</a></p>
+                    <p><a href="mailto:info@grandchaletinn.com">info@grandchaletinn.com</a></p>
+                    <p><a href="mailto:reservations@grandchaletinn.com">reservations@grandchaletinn.com</a></p>
                 </div>
                 <div class="contact-card">
                     <i class="fas fa-map-marker-alt"></i>
@@ -620,7 +637,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3><i class="fas fa-crown"></i>Neza<span>House</span></h3>
+                    <h3 class="footer-brand-logo"><img src="assets/grand-chalet-inn/logo.png" alt="Grand Chalet Inn" /></h3>
                     <p>Luxury redefined in the heart of Kigali.</p>
                     <div class="socials">
                         <a href="contact.html#"><i class="fab fa-facebook-f"></i></a>
@@ -643,7 +660,7 @@
                     <ul class="contact-info">
                         <li><i class="fas fa-map-marker-alt"></i> Kicukiro, Kigali</li>
                         <li><i class="fas fa-phone"></i> +250 783 500 003</li>
-                        <li><i class="fas fa-envelope"></i> info@nezahouse.com</li>
+                        <li><i class="fas fa-envelope"></i> info@grandchaletinn.com</li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -658,7 +675,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Neza House. All rights reserved. | Designed by <a href="https://1000-hills.netlify.app" target="_blank" class="design-link">1000 Hills Group</a></p>
+                <p>&copy; 2026 Grand Chalet Inn. All rights reserved. | Designed by <a href="https://1000-hills.netlify.app" target="_blank" class="design-link">1000 Hills Group</a></p>
             </div>
         </div>
     </footer>
@@ -762,5 +779,13 @@
             setTimeout(() => { msg.className = 'contact-message'; }, 5000);
         });
     </script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('siteLoader');
+            if (loader) { loader.classList.add('is-hidden'); setTimeout(function () { loader.remove(); }, 500); }
+        });
+    </script>
+
 </body>
 </html>
