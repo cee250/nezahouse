@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "python3 scripts/prepare_assets.py",
+  "buildCommand": "echo 'Static site: no build required'",
   "outputDirectory": "site",
   "rewrites": [
     {
