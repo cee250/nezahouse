@@ -97,7 +97,7 @@
         .page-header {
             padding: 140px 0 60px;
             background: linear-gradient(rgba(26,26,46,0.7), rgba(26,26,46,0.8)),
-                        url('assets/grand-chalet-inn/img_5680.webp');
+                        url('assets/grand-chalet-inn/photos/hero.jpg');
             background-size: cover; background-position: center;
             text-align: center; color: #fff;
         }
@@ -355,7 +355,50 @@
         .gallery-item.video-tile video { width: 100%; height: 100%; min-height: 0; display: block; object-fit: cover; }
         .gallery-item.video-tile .overlay { pointer-events: none; }
     </style>
-    </head>
+    
+<style id="grand-chalet-brand-sizing">
+/* Professional logo sizing */
+.navbar .brand-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 64px;
+    padding: 5px 12px;
+    border-radius: 12px;
+    background: rgba(255,255,255,.97);
+    box-shadow: 0 5px 18px rgba(0,0,0,.14);
+}
+.navbar .brand-logo img {
+    display: block;
+    width: 180px;
+    height: 62px;
+    max-width: none;
+    object-fit: contain;
+    object-position: center;
+}
+footer .footer-brand-logo {
+    display: flex;
+    align-items: center;
+    min-height: 64px;
+    margin-bottom: 12px;
+}
+footer .footer-brand-logo img {
+    display: block;
+    width: 142px;
+    height: 62px;
+    max-width: none;
+    object-fit: contain;
+    object-position: left center;
+}
+@media (max-width: 600px) {
+    .navbar .brand-logo { min-height: 52px; padding: 4px 8px; border-radius: 9px; }
+    .navbar .brand-logo img { width: 138px; height: 50px; }
+    footer .footer-brand-logo { min-height: 54px; }
+    footer .footer-brand-logo img { width: 120px; height: 54px; }
+}
+</style>
+
+</head>
 <body>
 
     <div class="site-loader" id="siteLoader" role="status" aria-label="Loading Grand Chalet Inn">
@@ -400,65 +443,177 @@
     <section class="gallery-section">
         <div class="container">
             <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-category="exterior">
+                    <img src="assets/grand-chalet-inn/photos/gallery-01.jpg" alt="Arrival at Grand Chalet Inn" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Arrival at Grand Chalet Inn</h3><p>The welcoming entrance and grounds</p></div>
+                </div>
+                <div class="gallery-item" data-category="exterior">
+                    <img src="assets/grand-chalet-inn/photos/gallery-02.jpg" alt="The Grand Chalet Facade" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>The Grand Chalet Facade</h3><p>A first look at the property</p></div>
+                </div>
+                <div class="gallery-item" data-category="interiors">
+                    <img src="assets/grand-chalet-inn/photos/gallery-03.jpg" alt="Warm Interior Details" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Warm Interior Details</h3><p>Thoughtful design throughout the inn</p></div>
+                </div>
+                <div class="gallery-item" data-category="exterior">
+                    <img src="assets/grand-chalet-inn/photos/gallery-04.jpg" alt="Garden Approach" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Garden Approach</h3><p>Quiet outdoor spaces around the property</p></div>
+                </div>
+                <div class="gallery-item" data-category="exterior">
+                    <img src="assets/grand-chalet-inn/photos/gallery-05.jpg" alt="Kigali Retreat" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Kigali Retreat</h3><p>Architecture surrounded by greenery</p></div>
+                </div>
+                <div class="gallery-item" data-category="interiors">
+                    <img src="assets/grand-chalet-inn/photos/gallery-06.jpg" alt="Shared Living Spaces" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Shared Living Spaces</h3><p>Comfortable spaces to relax together</p></div>
+                </div>
+                <div class="gallery-item" data-category="dining">
+                    <img src="assets/grand-chalet-inn/photos/gallery-07.jpg" alt="Dining & Conversation" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Dining & Conversation</h3><p>Inviting spaces for slow meals</p></div>
+                </div>
+                <div class="gallery-item" data-category="interiors">
+                    <img src="assets/grand-chalet-inn/photos/gallery-08.jpg" alt="Terrace Moments" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Terrace Moments</h3><p>Open-air areas for fresh Kigali mornings</p></div>
+                </div>
+                <div class="gallery-item" data-category="interiors">
+                    <img src="assets/grand-chalet-inn/photos/gallery-09.jpg" alt="A Place to Unwind" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>A Place to Unwind</h3><p>Warm textures and natural light</p></div>
+                </div>
                 <div class="gallery-item" data-category="rooms">
-                    <img src="assets/grand-chalet-inn/img_8194.webp" alt="Executive Suite" />
-                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Executive Suite</h3><p>Luxury accommodation</p></div>
-                </div>
-                <div class="gallery-item" data-category="restaurant">
-                    <img src="assets/grand-chalet-inn/img_8196.webp" alt="Restaurant" />
-                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Luxe Dining</h3><p>Fine dining experience</p></div>
-                </div>
-                <div class="gallery-item" data-category="pool">
-                    <img src="assets/grand-chalet-inn/img_5676.webp" alt="Pool" />
-                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Infinity Pool</h3><p>Panoramic views</p></div>
+                    <img src="assets/grand-chalet-inn/photos/gallery-10.jpg" alt="Karisimbi Room" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Karisimbi Room</h3><p>A calm, comfortable stay</p></div>
                 </div>
                 <div class="gallery-item" data-category="rooms">
-                    <img src="assets/grand-chalet-inn/img_5677.webp" alt="Deluxe Room" />
-                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Deluxe Room</h3><p>Ocean view</p></div>
-                </div>
-                <div class="gallery-item" data-category="spa">
-                    <img src="assets/grand-chalet-inn/img_5680.webp" alt="Spa" />
-                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Luxe Spa</h3><p>Relaxation therapy</p></div>
-                </div>
-                <div class="gallery-item" data-category="events">
-                    <img src="assets/grand-chalet-inn/img_5682.webp" alt="Event" />
-                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Events Hall</h3><p>Weddings & conferences</p></div>
-                </div>
-                <div class="gallery-item" data-category="restaurant">
-                    <img src="assets/grand-chalet-inn/img_5688.webp" alt="Food" />
-                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Gourmet Cuisine</h3><p>Signature dishes</p></div>
-                </div>
-                <div class="gallery-item" data-category="pool">
-                    <img src="assets/grand-chalet-inn/img_5691.webp" alt="Hotel Exterior" />
-                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Hotel Exterior</h3><p>Luxury facade</p></div>
+                    <img src="assets/grand-chalet-inn/photos/gallery-11.jpg" alt="Bisoke Room" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Bisoke Room</h3><p>Relaxed bedroom interiors</p></div>
                 </div>
                 <div class="gallery-item" data-category="rooms">
-                    <img src="assets/grand-chalet-inn/whatsapp-image-2026-09-04-at-06.36.27.webp" alt="Standard Room" />
-                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Standard Room</h3><p>Comfortable stay</p></div>
+                    <img src="assets/grand-chalet-inn/photos/gallery-12.jpg" alt="Muhabura Room" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Muhabura Room</h3><p>Prepared for restful nights</p></div>
                 </div>
-                <div class="gallery-item" data-category="spa">
-                    <img src="assets/grand-chalet-inn/whatsapp-image-2026-09-04-at-06.41.53.webp" alt="Massage" />
-                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Massage Therapy</h3><p>Wellness experience</p></div>
+                <div class="gallery-item" data-category="rooms">
+                    <img src="assets/grand-chalet-inn/photos/gallery-13.jpg" alt="Gahinga Room" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Gahinga Room</h3><p>Comfort with a local touch</p></div>
                 </div>
-                <div class="gallery-item" data-category="events">
-                    <img src="assets/grand-chalet-inn/whatsapp-image-2026-09-04-at-06.41.54.webp" alt="Wedding" />
-                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Weddings</h3><p>Dream ceremonies</p></div>
+                <div class="gallery-item" data-category="rooms">
+                    <img src="assets/grand-chalet-inn/photos/gallery-14.jpg" alt="Sabyinyo Room" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Sabyinyo Room</h3><p>A welcoming private retreat</p></div>
                 </div>
-                <div class="gallery-item" data-category="restaurant">
-                    <img src="assets/grand-chalet-inn/img_5678.webp" alt="Steak" />
-                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Grilled Specials</h3><p>Chef's selection</p></div>
+                <div class="gallery-item" data-category="rooms">
+                    <img src="assets/grand-chalet-inn/photos/gallery-15.jpg" alt="Bedroom Details" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Bedroom Details</h3><p>Quality bedding and thoughtful touches</p></div>
                 </div>
-                <div class="gallery-item video-tile" data-category="restaurant">
-                    <video controls muted loop playsinline preload="metadata" poster="assets/grand-chalet-inn/whatsapp-video-2026-09-04-at-06.36.26.webp"><source src="assets/grand-chalet-inn/whatsapp-video-2026-09-04-at-06.36.26.mp4" type="video/mp4" /></video>
-                    <div class="overlay"><i class="fas fa-play"></i><h3>Welcome Inside</h3><p>Watch the Grand Chalet Inn experience</p></div>
+                <div class="gallery-item" data-category="rooms">
+                    <img src="assets/grand-chalet-inn/photos/gallery-16.jpg" alt="Private Bathroom" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Private Bathroom</h3><p>Clean, bright and considered</p></div>
                 </div>
-                <div class="gallery-item video-tile" data-category="rooms">
-                    <video controls muted loop playsinline preload="metadata" poster="assets/grand-chalet-inn/whatsapp-video-2026-09-04-at-06.41.55.webp"><source src="assets/grand-chalet-inn/whatsapp-video-2026-09-04-at-06.41.55.mp4" type="video/mp4" /></video>
-                    <div class="overlay"><i class="fas fa-play"></i><h3>Room Walkthrough</h3><p>See the details up close</p></div>
+                <div class="gallery-item" data-category="rooms">
+                    <img src="assets/grand-chalet-inn/photos/gallery-17.jpg" alt="Room Comforts" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Room Comforts</h3><p>Space to settle in and feel at home</p></div>
                 </div>
-                <div class="gallery-item video-tile" data-category="pool">
-                    <video controls muted loop playsinline preload="metadata" poster="assets/grand-chalet-inn/whatsapp-video-2026-09-04-at-06.41.551.webp"><source src="assets/grand-chalet-inn/whatsapp-video-2026-09-04-at-06.41.551.mp4" type="video/mp4" /></video>
-                    <div class="overlay"><i class="fas fa-play"></i><h3>Relax and Unwind</h3><p>Discover the atmosphere</p></div>
+                <div class="gallery-item" data-category="rooms">
+                    <img src="assets/grand-chalet-inn/photos/gallery-18.jpg" alt="Quiet Corners" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Quiet Corners</h3><p>Designed for a peaceful stay</p></div>
+                </div>
+                <div class="gallery-item" data-category="interiors">
+                    <img src="assets/grand-chalet-inn/photos/gallery-19.jpg" alt="Hallway Details" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Hallway Details</h3><p>A warm welcome from room to room</p></div>
+                </div>
+                <div class="gallery-item" data-category="interiors">
+                    <img src="assets/grand-chalet-inn/photos/gallery-20.jpg" alt="Lobby Seating" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Lobby Seating</h3><p>Gather, read or simply slow down</p></div>
+                </div>
+                <div class="gallery-item" data-category="dining">
+                    <img src="assets/grand-chalet-inn/photos/gallery-21.jpg" alt="Breakfast & Dining" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Breakfast & Dining</h3><p>A relaxed setting for meals</p></div>
+                </div>
+                <div class="gallery-item" data-category="interiors">
+                    <img src="assets/grand-chalet-inn/photos/gallery-22.jpg" alt="Indoor Gathering" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Indoor Gathering</h3><p>Made for shared moments</p></div>
+                </div>
+                <div class="gallery-item" data-category="exterior">
+                    <img src="assets/grand-chalet-inn/photos/gallery-23.jpg" alt="Property Views" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Property Views</h3><p>Discover the character of the inn</p></div>
+                </div>
+                <div class="gallery-item" data-category="exterior">
+                    <img src="assets/grand-chalet-inn/photos/gallery-24.jpg" alt="Evening Atmosphere" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Evening Atmosphere</h3><p>Grand Chalet Inn after the day</p></div>
+                </div>
+                <div class="gallery-item" data-category="rooms">
+                    <img src="assets/grand-chalet-inn/photos/gallery-25.jpg" alt="Signature Bedroom" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Signature Bedroom</h3><p>A refined and restful interior</p></div>
+                </div>
+                <div class="gallery-item" data-category="rooms">
+                    <img src="assets/grand-chalet-inn/photos/gallery-26.jpg" alt="Room Perspective" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Room Perspective</h3><p>Space, light and comfort</p></div>
+                </div>
+                <div class="gallery-item" data-category="rooms">
+                    <img src="assets/grand-chalet-inn/photos/gallery-27.jpg" alt="Bedroom Styling" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Bedroom Styling</h3><p>Simple details that make a difference</p></div>
+                </div>
+                <div class="gallery-item" data-category="rooms">
+                    <img src="assets/grand-chalet-inn/photos/gallery-28.jpg" alt="Suite Details" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Suite Details</h3><p>Comfortable touches throughout</p></div>
+                </div>
+                <div class="gallery-item" data-category="rooms">
+                    <img src="assets/grand-chalet-inn/photos/gallery-29.jpg" alt="Restful Spaces" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Restful Spaces</h3><p>An inviting place to recharge</p></div>
+                </div>
+                <div class="gallery-item" data-category="rooms">
+                    <img src="assets/grand-chalet-inn/photos/gallery-30.jpg" alt="Bedroom Window" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Bedroom Window</h3><p>Natural light and fresh air</p></div>
+                </div>
+                <div class="gallery-item" data-category="interiors">
+                    <img src="assets/grand-chalet-inn/photos/gallery-31.jpg" alt="Interior Character" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Interior Character</h3><p>Distinctive details of the property</p></div>
+                </div>
+                <div class="gallery-item" data-category="interiors">
+                    <img src="assets/grand-chalet-inn/photos/gallery-32.jpg" alt="The Welcome Hall" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>The Welcome Hall</h3><p>A warm arrival experience</p></div>
+                </div>
+                <div class="gallery-item" data-category="interiors">
+                    <img src="assets/grand-chalet-inn/photos/gallery-33.jpg" alt="Relaxed Hospitality" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Relaxed Hospitality</h3><p>Spaces designed around guests</p></div>
+                </div>
+                <div class="gallery-item" data-category="dining">
+                    <img src="assets/grand-chalet-inn/photos/gallery-34.jpg" alt="Dining Atmosphere" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Dining Atmosphere</h3><p>A comfortable setting for conversation</p></div>
+                </div>
+                <div class="gallery-item" data-category="interiors">
+                    <img src="assets/grand-chalet-inn/photos/gallery-35.jpg" alt="Shared Spaces" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Shared Spaces</h3><p>Room to gather and connect</p></div>
+                </div>
+                <div class="gallery-item" data-category="exterior">
+                    <img src="assets/grand-chalet-inn/photos/gallery-36.jpg" alt="Grand Chalet Grounds" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Grand Chalet Grounds</h3><p>Peaceful outdoor surroundings</p></div>
+                </div>
+                <div class="gallery-item" data-category="exterior">
+                    <img src="assets/grand-chalet-inn/photos/gallery-37.jpg" alt="The Inn in Kigali" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>The Inn in Kigali</h3><p>A quiet retreat in the city</p></div>
+                </div>
+                <div class="gallery-item" data-category="rooms">
+                    <img src="assets/grand-chalet-inn/photos/gallery-38.jpg" alt="Comfort in Every Room" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Comfort in Every Room</h3><p>Prepared for a memorable stay</p></div>
+                </div>
+                <div class="gallery-item" data-category="rooms">
+                    <img src="assets/grand-chalet-inn/photos/gallery-39.jpg" alt="A Restful Retreat" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>A Restful Retreat</h3><p>Sleep well at Grand Chalet Inn</p></div>
+                </div>
+                <div class="gallery-item" data-category="interiors">
+                    <img src="assets/grand-chalet-inn/photos/gallery-40.jpg" alt="Details with Warmth" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Details with Warmth</h3><p>Personal touches throughout</p></div>
+                </div>
+                <div class="gallery-item" data-category="exterior">
+                    <img src="assets/grand-chalet-inn/photos/gallery-41.jpg" alt="Welcome to Grand Chalet Inn" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Welcome to Grand Chalet Inn</h3><p>Your Kigali stay begins here</p></div>
+                </div>
+                <div class="gallery-item" data-category="interiors">
+                    <img src="assets/grand-chalet-inn/photos/gallery-42.jpg" alt="Stay Awhile" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Stay Awhile</h3><p>Spaces made for lingering</p></div>
+                </div>
+                <div class="gallery-item" data-category="rooms">
+                    <img src="assets/grand-chalet-inn/photos/gallery-43.jpg" alt="Your Room Awaits" loading="lazy" />
+                    <div class="overlay"><i class="fas fa-search-plus"></i><h3>Your Room Awaits</h3><p>Settle in and feel at home</p></div>
                 </div>
             </div>
         </div>
